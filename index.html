@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-3</title>
+    <style>
+        .play_ipl{
+            margin: 17% 0 0 41%;
+        }
+        .btn{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="play_ipl">
+        <video id="video1" width="320" height="240" poster="#" controls>
+            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg">
+            <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="212" height="160">
+                <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                <param name="allowFullScreen" value="true" />
+                <param name="wmode" value="transparent" />
+                <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':true}]}" />
+                <img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below" />
+            </object>
+        </video>
+        <br>
+        <div class="btn">
+            <button onclick="slowPlaySpeed();">Slow</button>
+            <button onclick="normalPlaySpeed();">Normal</button>
+            <button onclick="fastPlaySpeed();">Fast</button>
+        </div>
+    </section>
+
+<!--    <video controls="controls" autoplay="autoplay" poster="#" width="212" height="160">-->
+<!--        <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />-->
+<!--        <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="212" height="160">-->
+<!--            <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />-->
+<!--            <param name="allowFullScreen" value="true" />-->
+<!--            <param name="wmode" value="transparent" />-->
+<!--            <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':true}]}" />-->
+<!--            <img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below" />-->
+<!--        </object>-->
+<!--    </video>-->
+
+</div>
+
+</body>
+<script>
+    var vid = document.getElementById("video1");
+
+    function slowPlaySpeed() {
+        vid.playbackRate = 0.5;
+    }
+
+    function normalPlaySpeed() {
+        vid.playbackRate = 1;
+    }
+
+    function fastPlaySpeed() {
+        vid.playbackRate = 2;
+    }
+</script>
+</html>
